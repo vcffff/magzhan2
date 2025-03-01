@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-powered APIs for developers">
+    <title>pricing page</title>
+    <link rel="stylesheet" href="team.css">
+    
+    
+</head>
+<body>
+    
+    <section>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">Maga Api</a>
+                <button class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="team " style="margin-top: 30px;">
+            <h2 style="font-family: Montserrat;font-size: 60px;">Наша команда</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="media-files/images/john-mark-arnold-xbBaOa_dd5I-unsplash.jpg" alt="Team Member 1">
+                    <h3>Алихан</h3>
+                    <p>Frontend Developer</p>
+                </div>
+                <div class="team-member">
+                    <img src="media-files/images/camilo-fierro-z7rcwqCi77s-unsplash.jpg" alt="Team Member 2">
+                    <h3>Айдана</h3>
+                    <p>UI/UX Designer</p>
+                </div>
+                <div class="team-member">
+                    <img src="media-files/images/albert-dera-ILip77SbmOE-unsplash.jpg" alt="Team Member 3">
+                    <h3>Магжан</h3>
+                    <p>Backend Developer</p>
+                </div>
+                <div class="team-member">
+                    <img src="media-files/images/kelly-sikkema-crKv6Ic3Mh0-unsplash.jpg" alt="Team Member 4">
+                    <h3>Ернар</h3>
+                    <p>Mobile Developer</p>
+                </div>
+                <div class="team-member">
+                    <img src="media-files/add.png" alt="Team Member 4">
+                    <h3 style="text-align: center;">Добавить себя</h3>
+                    <button id="add-member-btn">Добавить себя</button>
+                </div>
+                
+            </div>
+            <h1 style="font-size: 60px;">Наши проекты</h1>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="media-files/illustrations/undraw_gifts_0ceh.svg" alt="Team Member 1">
+                    <h1>back end</h1>
+                </div>
+                <div class="team-member">
+                    <img src="media-files/illustrations/undraw_fingerprint_login_re_t71l.svg" alt="Team Member 2">
+                    <h1>hello wolrd</h1>
+                </div>
+                <div class="team-member">
+                    <img src="media-files/illustrations/undraw_chatting_re_j55r.svg" alt="Team Member 3">
+                    <h1>json parse</h1>
+                   
+                </div>
+                <div class="team-member">
+                    <img src="media-files/illustrations/undraw_join_re_w1lh.svg" alt="Team Member 4">
+                    <h1>something</h1>
+                </div>
+               
+                
+            </div>
+        </section>
+        <footer class="footer text-light">
+            <div class="container">
+                <div class="row">
+                    
+        
+                    <!-- Адрес и соцсети -->
+                    <div class="">
+                       
+                        <a>© 2025 AI API. Все права защищены.</a>
+                        <br>
+                        <a>Создавайте, интегрируйте и масштабируйте </a>
+<br>
+                            <a href="#">Условия использования</a> 
+                            <br>
+                            <a href="#">Политика конфиденциальности</a> 
+                            <br>
+                            <a href="#">Поддержка</a>
+                        
+                       
+                       
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+    </section>
+   
+        <script >
+            document.addEventListener("DOMContentLoaded", function () {
+    let addButton = document.getElementById("add-member-btn");
+    let teamContainer = document.querySelector(".team-container");
+
+    addButton.addEventListener("click", function () {
+        let name = prompt("Введите ваше имя:");
+        if (!name) return;
+
+        let fileInput = document.createElement("input");
+        fileInput.type = "file";
+        fileInput.accept = "image/*";
+
+        fileInput.addEventListener("change", function () {
+            let file = fileInput.files[0];
+            if (!file) return;
+
+            let reader = new FileReader();
+            reader.onload = function (e) {
+                let newMember = document.createElement("div");
+                newMember.classList.add("team-member");
+                newMember.innerHTML = `
+                    <img src="${e.target.result}" alt="User Photo">
+                    <h3>${name}</h3>
+                    <p>New Developer</p>
+                `;
+                teamContainer.appendChild(newMember);
+            };
+            reader.readAsDataURL(file);
+        });
+
+        fileInput.click();
+    });
+});
+
+            const burger = document.querySelector(".burger-menu");
+            const navMenu = document.querySelector(".nav-menu");
+            
+            burger.addEventListener("click", () => {
+                burger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+            });
+            let button=document.querySelector('.button')
+            let add=document.querySelector('.modal-content')
+            button.addEventListener('click',function(){
+                add.style.display='block',
+                add.style.background='red'
+            })
+            document.addEventListener("DOMContentLoaded", function () {
+    let button = document.querySelector('.button'); 
+    let modal = document.querySelector('.modal');
+    let modalContent = document.querySelector('.modal-content');
+    let closeButton = document.querySelector('.close-btn'); 
+    let button2=document.querySelector('.pay-btn')
+    button2.addEventListener('click',function(){
+      let divka=  document.createElement('div')
+
+    })
+    
+    button.addEventListener('click', function () {
+        modal.style.display = 'flex';
+        setTimeout(() => modal.classList.add('show'), 10);
+    });
+
+    closeButton.addEventListener('click', function () {
+        modal.classList.remove('show');
+        setTimeout(() => modal.style.display = 'none', 300);
+    });
+
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.classList.remove('show');
+            setTimeout(() => modal.style.display = 'none', 300);
+        }
+    });
+});
+
+            </script>
+    
+    
+</body>
+</html>

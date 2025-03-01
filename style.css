@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Darker+Grotesque:wght@300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titan+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero {
+    background-image: url('media-files/images/annie-spratt-QckxruozjRg-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    text-align: left;
+    padding: 0 15%;
+    color: white;
+    
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+
+
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat';
+    line-height: 19.5px;
+    
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+hr{
+    width: 1920px;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px); 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav-menu a {
+    position: relative;
+    font-size: 20.18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 15.83px;
+    color: white;
+    text-decoration: none !important;
+    transition: color 0.1s ease-in-out;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom:-15px;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition:width 0.1s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.nav-menu a:hover {
+    
+}
+
+
+.nav-menu a.active {
+    color: rgba(147, 236, 130, 1) !important;
+
+}
+
+
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 100px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+.main-text{
+    font-family: 'Montserrat';
+    font-weight:600;
+    font-size: 48px;
+    color: rgba(255, 255, 255, 1);
+    
+}
+.button{
+   background-color: rgba(73, 133, 255, 1);
+   color: white;
+   border-radius: 30px;
+   font-size: 15px;
+   border: none;
+   filter: drop-shadow(rgba(111, 111, 111, 0.25));
+   width: 200px;
+   height: 45px;
+   justify-content: center;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 5%;
+}
+
+.button:hover{
+    scale: 1.1;
+    transition: all 1ms linear;
+    cursor: pointer;
+}
+
+.jojo{
+    font-size: 15px;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    
+    
+}
+
+
+
+.advantages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 50px;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+.adv-card {
+    background:white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(10, 10, 0, 0.1);
+    transition: 0.3s;
+}
+
+.adv-card:hover {
+    transform: translateY(-30px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  
+    
+}
+
+
+.adv-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.adv-text {
+    font-size: 16px;
+   color: black;
+}
+
+.image{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+
+
+@media screen and (max-width:362px) {
+    .main-text{
+        font-size: 30px;
+    }
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+        padding-left: 20px;
+    }
+
+    
+}
+
+@media screen and (max-width:768px) {
+    .button{
+        margin-right: 50px;
+    }
+    
+}
+
+
+@media screen  and (min-width:700px) and  (max-width:1477px){
+    
+   .advantages{
+    display: grid;
+    grid-template-columns: repeat(3,310px);
+   }
+   .image{
+    margin-right: 40px;
+    width: 250px;
+   }
+   
+   
+}
+
+@media screen  and (min-width:700px) and  (max-width:1020px){
+    
+    .advantages{
+     display: grid;
+     grid-template-columns: repeat(3,200px);
+    }
+    .adv-card{
+        width: 200px;
+    }
+
+    .image{
+     margin-right: 40px;
+     width: 150px;
+    }
+    
+    
+ }
+
+@media screen and (max-width:700px) {
+
+    .advantages{
+    display: grid;
+    grid-template-columns: repeat(2,170px);
+   
+   }
+ 
+   .footer a {
+   margin-left: 20px;
+   }
+   .center{
+margin-left: 20px;
+   }
+   
+   .image{
+    width: 150px;
+    height: 150px;
+    transform: translateX(-10px);
+   }
+   .adv-text {
+    font-size: 10px;
+   color: black;
+}
+.adv-title{
+    font-size:10px;
+}
+  
+}
+
+.footer {
+    background: #3F4447;
+    color: white;
+    padding: 20px 0;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer-icons img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+
+
+@media screen and (max-width:   px) {
+
+    .advantages{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+   }
+   .footer a {
+   margin-left: 20px;
+   }
+   .center{
+margin-left: 20px;
+   }
+   
+   .image{
+    width: 100px;
+    height: 50px;
+   }
+   .adv-text {
+    font-size: 10px;
+   color: black;
+}
+.adv-title{
+    font-size:20px;
+}
+
+}
+
+@media screen and (min-width:360px) and (max-width:582px) {
+
+    .advantages{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    justify-items: center;
+    
+   }
+   .footer a {
+   margin-left: 20px;
+   }
+   .main-text{
+    font-size: 40px;
+   }
+   
+   
+   .image{
+    width: 100px;
+    height: 50px;
+   }
+   .adv-text {
+    font-size: 10px;
+   color: black;
+}
+.adv-title{
+    font-size:20px;
+}
+}
